@@ -55,4 +55,4 @@ The following instructions will help you build up the software step by step.
    Open ```thin_object_bin_pick_mani.ipynb```
 
 ## Author
-Zhekai Tong (ztong@connect.ust.hk) and Tierui He (theae@connect.ust.hk)
+Qianyi Xu(qxuaj@connect.ust.hk), Zhekai Tong (ztong@connect.ust.hk) and Tierui He (theae@connect.ust.hk)
