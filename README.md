@@ -15,13 +15,13 @@ Object detection is implemented on Mask R-CNN, a deep neural network for instanc
 
 ### 2.1 Hardware
 1. [**Universal Robot UR10**](https://www.universal-robots.com/products/ur10-robot/)
-2. [**Robotiq 140mm Adaptive parallel-jaw gripper**](https://robotiq.com/products/2f85-140-adaptive-robot-gripper)
+2. [**Robotiq 2F-140**](https://robotiq.com/products/2f85-140-adaptive-robot-gripper) Robotiq 140mm Adaptive parallel-jaw gripper
 3. [**Robotiq FT300**](https://robotiq.com/products/ft-300-force-torque-sensor) Force Torque Sensor
-4. [**Realsense SR300**](https://www.intelrealsense.com/coded-light/)
+4. [**Realsense SR300 camera**](https://www.intelrealsense.com/coded-light/)
 
 ### 2.2 Software
 1. Our package was developed in [**Ubuntu 16.04**](http://releases.ubuntu.com/16.04/) and [**ROS Kinetic**](http://wiki.ros.org/ROS/Installation).
-2. [**urx**](https://github.com/ThomasTimm/ur_modern_driver/):Python library to control UR10 robot.
+2. [**urx**](https://github.com/ThomasTimm/ur_modern_driver/):Python library for UR10 robot control.
 3. [Robotiq ROS package](http://wiki.ros.org/robotiq/): ROS driver for Robotiq adaptive gripper and force torque sensor.
 4. [Realsense ROS Wrapper](https://github.com/IntelRealSense/realsense-ros): ROS wrapper for Realsense SR300.
 5. [AprilTag ROS Wrapper](https://github.com/AprilRobotics/apriltag_ros): ROS wrapper for apriltag library.
@@ -36,19 +36,20 @@ cd ..
 catkin_make
 ```
 
-## 4. Get started
-The following instructions will help you build up the software step by step.
+## 4. Run Tilt and Pivot
+### 4.1 Run with real robot
 
 1. Follow the tutorial in [Universal Robot package for ROS Kinetic](http://wiki.ros.org/universal_robot) and [Robotiq ROS package](http://wiki.ros.org/robotiq/) to set up hardware properly.
 2. Run Realsense SR300 camera in ROS. See [link](http://wiki.ros.org/RealSense).
-3. Connect Arduino and tactile sensor, output the sensor readings in ROS. See [link](http://wiki.ros.org/rosserial_arduino/Tutorials).
-4. Setup frames:
+3. Run apriltag_ros package. See (https://github.com/AprilRobotics/apriltag_ros).
+4. Run tilt and pivot script:
    ```
-   cd scripts
+   roscd pickpack/srcipts
    ```
    ```
-   python frame_transform.py 
+   jupyter notebook 
    ```
+   Open ```froce_yakeli_tilt_pivot.ipynb ```
 5. Open a terminal, run object detection:
    ```
    cd samples
